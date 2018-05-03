@@ -1,0 +1,286 @@
+.login-form{
+  background:rgba(255,255,255,0.8);
+padding:20px;
+border-top:3px solid#3e4043;
+}
+.innter-form{
+padding-top:20px;
+}
+.final-login li{
+width:50%;
+}
+
+.nav-tabs {
+  border-bottom: none !important;
+}
+
+.nav-tabs>li{
+color:#222 !important;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+  color: #fff;
+  border: none !important;
+  border-bottom-color: transparent;
+border-radius:none !important;
+}
+.nav-tabs>li>a {
+  margin-right: 2px;
+  line-height: 1.428571429;
+  border: none !important;
+  border-radius:none !important;
+text-transform:uppercase;
+font-size:16px;
+}
+
+.social-login{
+text-align:center;
+font-size:12px;
+}
+.social-login p{
+margin:15px 0;
+}
+.social-login ul{
+margin:0;
+padding:0;
+list-style-type:none;
+}
+.social-login ul li{
+width:33%;
+float:left;
+  clear:fix;
+}
+.social-login ul li a{
+font-size:13px;
+color:#fff;
+text-decoration:none;
+padding:10px 0;
+display:block;
+}
+.social-login ul li:nth-child(1) a{
+background:#3b5998;
+}
+.social-login ul li:nth-child(2) a{
+background:#e74c3d;
+}
+.social-login ul li:nth-child(3) a{
+background:#3698d9;
+}
+.sa-innate-form input[type=text], input[type=password], input[type=file], textarea, select, email{
+  font-size:13px;
+padding:10px;
+border:1px solid#ccc;
+outline:none;
+width:100%;
+margin:8px 0;
+
+}
+.sa-innate-form input[type=submit]{
+  border:1px solid#e64b3b;
+background:#e64b3b;
+color:#fff;
+padding:10px 25px;
+font-size:14px;
+margin-top:5px;
+}
+.sa-innate-form input[type=submit]:hover{
+border:1px solid#db3b2b;
+background:#db3b2b;
+color:#fff;
+}
+
+.sa-innate-form button{
+border:1px solid#e64b3b;
+background:#e64b3b;
+color:#fff;
+padding:10px 25px;
+font-size:14px;
+margin-top:5px;
+}
+.sa-innate-form button:hover{
+border:1px solid#db3b2b;
+background:#db3b2b;
+color:#fff;
+}
+  .sa-innate-form p{
+      font-size:13px;
+      padding-top:10px;
+  }
+.navbar{
+  background-color: transparent !important;
+}
+.jumbotron{
+  background-color: transparent !important;
+  color: #fff;
+}
+.carssoul{
+  background: url('../../../assets/images/web/Headerimage.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.logo{
+  height: 10%;
+  width: 20%;
+  margin-left: 9%;
+}
+
+.btn-link{
+  color: #fff;
+}
+.btnlogin{
+  margin-right: 6%;
+}
+.inputsearch::-webkit-input-placeholder{
+  color: #fff;
+}
+.inputsearch{
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+#searchform{
+  margin-left: 25%;
+  margin-top: 7%;
+  color: #fff;
+}
+
+#services{
+  background: url('../../../assets/images/web/backgroundicone.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 5%;
+  color: #004545;
+  padding-bottom: 5%;
+}
+.description{
+  background-color: #004545 ;
+  padding-top: 5%;
+  color: #fff;
+  padding-bottom: 5%;
+
+}
+#inscriptionbutton,#viewbutton{
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+#section4{
+  background: url('../../../assets/images/Web/ImagePlat.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+  color: #fff;
+  padding-bottom: 10%;
+}
+.text{
+  text-align: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, .1);
+  color: #ffffff;
+  margin-top: 57px;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  font-size: 38px;
+}
+#section5{
+  padding-top: 2%;
+}
+#section5 > #title{
+  color: #006064;
+}
+#section5 > .row{
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+#section6{
+  background-color: #004545 ;
+  color: #fff;
+
+}
+#section6 > .row > .appmobile{
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg); /* Safari 3-8 */
+  transform: rotate(-10deg);
+}
+section6 > .row > #appmobiledownlowd{
+  padding-top: 5%;
+}
+.phone{
+  height: 100%;
+  z-index: 2;
+  width: 18%;
+}
+.carousel-caption h1 {
+  max-width: 100%;
+  background-color: #ffb81c;
+  text-align:center;
+ }
+ .section1image {
+  height: 35%;
+}
+.downloadtext{
+  padding-top: 10%;
+  font-family: "Avenir LT Std";
+
+
+}
+.downloadapp{
+  padding-top: 5%;
+ width: 30%;
+ height: 100%;
+}
+.footer{
+padding-top: 5%;
+}
+#logofooter{
+  width: 50%;
+}
+#footerText{
+  color: #296064;
+}
+#btnsearch{
+  margin-left: 5%;
+}
+
+h1 , h2 , h3 , h4 , p {
+  font-family: "Avenir LT Std";
+}
+
+.btn{
+  font-family: "Avenir LT Std";
+}
+.modal-title{
+  font-size: 23px;
+  color: rgb(0,70,70);
+  font-family: "Avenir LT Std";
+  text-align: center;
+}
+.textdescription{
+  margin-top: 15%;
+}
+#modal-inscription-body{
+  background: url('../../../assets/images/web/backgroundicone.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+  color: #fff;
+  padding-bottom: 10%;
+}
+.imgmodal{
+  width: 60%;
+  margin-left: 20%;
+  vertical-align: middle;
+  border-style: none;
+  height: 30%;
+}
+#modal-login-body{
+  background: url('../../../assets/images/web/backgroundicone.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+  color: #fff;
+  padding-bottom: 10%;
+
+}
+.modal-title{
+  margin-left: 35% !important;
+}

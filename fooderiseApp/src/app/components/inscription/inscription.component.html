@@ -1,0 +1,97 @@
+<div class="container">
+  {{Error}}
+  <ul *ngIf="Error.length > 0">
+    <p *ngFor="let error of Error" class="alert alert-warning">{{error}}</p>
+  </ul>
+  <form [hidden]='!modalShow' (ngSubmit)="onSubmit()" #clientForm="ngForm">
+    <div>
+      <div class="form-group">
+        <input type="text" class="form-control" minlength="3" id="name" required [(ngModel)]="model.name" name="name" placeholder="Nom" #name="ngModel" pattern="[A-Za-z]{3,}">
+        <i class="glyphicon glyphicon-user form-control-feedback"></i>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+          votre Nom est Invalide : Votre nom doit contenir au moins trois lettres (pas de chiffres ou de caractères spéciaux):
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" minlength="3" id="email" required [(ngModel)]="model.email" name="email" #email="ngModel"  placeholder="Adresse mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+          Votre Mail est invalid
+        </div>
+      </div>
+      <div class="form-group">
+        <select class="form-control selectpicker" (change)="selectchange($event)" [(ngModel)]="model.accountType" #accountType="ngModel">
+            <option  disabled="disabled" selected=true >S'inccrire comme :</option>
+          <option *ngFor="let account of AccountType" [value]="account.id">{{account.type}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="password" required [(ngModel)]="model.password" name="password" #password="ngModel" placeholder="Mot de passe" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+          Mot de passe doit contenir au moins 8 caractères d'au moins un chiffre, et une lettre majuscule et minuscule .
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" class="form-control" id="phoneNumber" required [(ngModel)]="model.phoneNumber" name="phoneNumber" #phoneNumber="ngModel" placeholder="+21650000000">
+        <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)" class="alert alert-danger">
+          Numero De Téléphone est invalid
+        </div>
+      </div>
+
+      <button type="submit" class="form-control signinbutton" [disabled]="!clientForm.form.valid">S'inscrire</button>
+      <p> vous avez déja une compte  <a href=""> se connecter</a></p>
+
+
+      <!--button type="button" class="btn btn-default" (click)="next=true" [disabled]="!clientForm.form.valid">New Hero</button-->
+
+    </div>
+  </form>
+  <form [hidden]='modalShow' (ngSubmit)="foodProfileSave()" #clientForm="ngForm">
+    <div>
+      <div class="row">
+        <div class="col-xs-3">Groupe Alimentaire : </div>
+        <div class="form-group">
+          <!-- Radio group !-->
+          <div *ngFor="let item of foodProfile.foodGroup">
+            <div class="radio">
+              <label class="container">
+                <input type="checkbox" name="foodGroup" value={{item.id}} ng-model="foodProfile.foodGroup.checked" (change)="setFoodGroup(item,$event)"> {{ item.title }}
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Intolerance : </div>
+        <div class="form-group">
+          <!-- Radio group !-->
+          <div *ngFor="let item of foodProfile.intolerances;">
+            <div class="radio">
+              <label class="container">
+                <input type="checkbox" name="intolerances" value={{item.id}} ng-model="item.checked" (change)="setIntolerances(item,$event)"> {{ item.title }}
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Pratique de sport : </div>
+        <div class="form-group">
+          <!-- Radio group !-->
+          <div *ngFor="let item of foodProfile.sportActivitiesHours">
+            <div class="radio">
+              <label class="container">
+                <input type="radio" name="sportActivitiesHours" value={{item.id}} (change)="onSelectionChange(item)"> {{ item.title }}
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="form-control signinbutton" [disabled]="!clientForm.form.valid">Valider</button>
+    </div>
+  </form>
+</div>
